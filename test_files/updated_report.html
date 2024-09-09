@@ -1,0 +1,288 @@
+<style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        font: 14px/1.4 Georgia, Serif;
+    }
+
+    table.table1 {
+        border: 1px solid black;
+        box-shadow: 0 0 0 0.1rem black;
+        border-collapse: collapse;
+    }
+
+    table.table2 {
+        text-align: center;
+        border-collapse: collapse;
+        margin-right: auto;
+
+    }
+
+    table.table3 {
+        border:1px solid black;
+        border-collapse: collapse;
+
+    }
+
+    table.table4 {
+        text-align: center;
+        border-collapse: collapse;
+        font: 15px/1.4 Georgia,Serif;
+        text-align: left;
+        box-shadow: 0 0 0 0.1rem black;
+        border-radius: 1px;
+        margin: 0.1rem;
+        padding: 0.1rem;
+        outline-offset: 0.1rem;
+        border: 5px solid black;
+        background: #DBFBF1;
+    }
+
+    th {
+        background: #000000;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    td,th {
+        padding: 6px;
+        border: 1px solid #9B9B9B;
+        text-align: center;
+    }
+
+    .button1 {
+        font-size:  10px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 10px 12px;
+        background-color: black;
+        margin: 0;
+    }
+
+    .sub-table-td{
+        border:none;
+    }
+
+    h2 {
+        color:#EEEEEE;
+        background-color: black;
+        border: medium groove black;
+        text-align: center;
+        box-shadow: 0 0 0 0.5rem black;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        outline-offset: 0.5rem;
+    }
+
+    span{
+        font: 15px/1.4 Georgia, Serif;
+        text-align: left;
+        box-shadow: 0 0 0 0.1rem black;
+        margin: 0.1rem;
+        padding: 0.1rem;
+        outline-offset: 0.1rem;
+    }
+
+    [data-tab-info]{
+        display: none;
+    }
+
+
+    .active[data-tab-info]{
+        display: block;
+    }
+
+    .tab-content {
+        margin-top: 1rem;
+        padding-left: 1rem;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: rgb(0,0,0);
+
+    }
+
+    .tabs {
+        background-color: rgb(0,0,0);
+        font-size: 25px;
+        color: rgb(255,255,255);
+        display: flex;
+    }
+
+    .tabs span {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .tabs span:hover {
+    
+        cursor: pointer;
+        color:  rgb(22, 250, 10);
+    }
+
+    </style>
+<h2 align="center"><u><b>File Comparision Report</b></u>
+<br><br>
+<div class="container">
+    <div class="tabs">
+        <span data-tab-value="#tab_1">File Details</span>
+        <span data-tab-value="#tab_2">Comparision Columns</span>
+        <span data-tab-value="#tab_3">Comparision Summary</span>
+    </div>
+</h2>
+<div class="tab-content">
+<div class="tab__tab active" id="tab_1" data-tab-info>
+    <p>
+        <table>
+            <tr>
+                <td>
+                    <table class="table3" style="float: left;">
+                        <th>File</th><th>File Name</th>
+                        <tr><td align=""right">Source File Name:</td><td>df1</td></tr>
+                        <tr><td align=""right">Target File Name:</td><td>df2</td></tr>
+                        <tr><td align=""right">Key Column for Comparision:</td><td>fenergo_id</td></tr>
+                        <tr><td align=""right">Duplicates on Key Column:</td><td>No</td></tr>
+                        <tr><td align=""right">Comparision Result:</td><td><b style="background-color:#FF0000"> Mismatch</b> </td></tr>
+                    </table>
+                </tr>
+
+            <tr>
+                <table class="table2">
+                    <tr>
+                        <td class="sub-table-td">
+                            <table class="table3" style="float:left">
+                                <th colspan="3">Source File Details</th>
+                                <tr><td align="left">Number of Rows in Sourcefile</td><td>4</td></tr>
+                                <tr><td align="left">Number of Columns in Sourcefile</td><td>3</td></tr>
+                            </table>
+                        </td>
+
+                        <td class="sub-table-td">
+                            <table class="table3" style="float:left">
+                                <th colspan="3">Source File Details</th>
+                                <tr><td align="left">Number of Rows in Targetfile</td><td>4</td></tr>
+                                <tr><td align="left">Number of Columns in Targetfile</td><td>4</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <br>
+
+            <tr>
+                <table class="table2">
+                    <tr>
+                        <td class="sub-table-td">
+                            <table class="table3" style="float:left">
+                                <th colspan="3">Comparision Row Summary</th>
+                                <tr><td>Number of Rows in Common</td><td>4</td></tr>
+                                <tr><td>Number of Rows only in Source File</td><td name="row-value">0</td></tr>
+                                <tr><td>Number of Rows only in Target File</td><td name="row-value">0</td></tr>
+                            </table>
+                        </td>
+
+                        <td class="sub-table-td">
+                            <table class="table3" style="float:left">
+                                <th colspan="3">Comparision Row Summary</th>
+                                <tr><td>Number of Columns in Common</td><td>3</td></tr>
+                                <tr><td>Number of Columns only in Source File</td><td name="col-value">0</td></tr>
+                                <tr><td>Number of Columns only in Target File</td><td name="col-value">1</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+
+ <td class="sub-table=td"><br><br><table class="table4" id="tab4">
+                <thead><tr><th>Columns only in Target file </th></tr></thead> <tr><td>phone_bo</td></tr></table></td></tr></table></p></div><div class="tabs__tab" id="tab_2" data-tab-info><p><button class="button1"   onclick=display_all()>All Columns </button>
+            <button class="button1" onclick=display_only_mismatch()>Display Mismatch Columns</button>
+            <button class="button1" onclick=display_only_match()>Display Match Columns</button>
+            <br><br>
+            <table class="table4" id="tab4_1"><thead><tr><th>Column Name</th><th>Total Rows</th><th>Matched Rows</th>
+            <th>Mismatched Rows</th></tr></thead></head><tr style="background-color:#00FF00"><td>FENERGO_ID</td><td>4</td><td>4</td><td>0</td><tr><tr style="background-color:#00FF00"><td>NAME</td><td>4</td><td>4</td><td>0</td><tr><tr style="background-color:#FF0000"><td>ADDRESS</td><td>4</td><td>3</td><td>1</td><tr></table></p></div><div class="tabs__tab" id="tab_3" data-tab-info><p><pre>DataComPy&nbsp;Comparison<br>--------------------<br><br>DataFrame&nbsp;Summary<br>-----------------<br><br>&nbsp;&nbsp;DataFrame&nbsp;&nbsp;Columns&nbsp;&nbsp;Rows<br>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;df1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<br>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;df2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<br><br>Column&nbsp;Summary<br>--------------<br><br>Number&nbsp;of&nbsp;columns&nbsp;in&nbsp;common:&nbsp;3<br>Number&nbsp;of&nbsp;columns&nbsp;in&nbsp;df1&nbsp;but&nbsp;not&nbsp;in&nbsp;df2:&nbsp;0<br>Number&nbsp;of&nbsp;columns&nbsp;in&nbsp;df2&nbsp;but&nbsp;not&nbsp;in&nbsp;df1:&nbsp;1<br><br>Row&nbsp;Summary<br>-----------<br><br>Matched&nbsp;on:&nbsp;fenergo_id<br>Any&nbsp;duplicates&nbsp;on&nbsp;match&nbsp;values:&nbsp;No<br>Absolute&nbsp;Tolerance:&nbsp;0<br>Relative&nbsp;Tolerance:&nbsp;0<br>Number&nbsp;of&nbsp;rows&nbsp;in&nbsp;common:&nbsp;4<br>Number&nbsp;of&nbsp;rows&nbsp;in&nbsp;df1&nbsp;but&nbsp;not&nbsp;in&nbsp;df2:&nbsp;0<br>Number&nbsp;of&nbsp;rows&nbsp;in&nbsp;df2&nbsp;but&nbsp;not&nbsp;in&nbsp;df1:&nbsp;0<br><br>Number&nbsp;of&nbsp;rows&nbsp;with&nbsp;some&nbsp;compared&nbsp;columns&nbsp;unequal:&nbsp;1<br>Number&nbsp;of&nbsp;rows&nbsp;with&nbsp;all&nbsp;compared&nbsp;columns&nbsp;equal:&nbsp;3<br><br>Column&nbsp;Comparison<br>-----------------<br><br>Number&nbsp;of&nbsp;columns&nbsp;compared&nbsp;with&nbsp;some&nbsp;values&nbsp;unequal:&nbsp;1<br>Number&nbsp;of&nbsp;columns&nbsp;compared&nbsp;with&nbsp;all&nbsp;values&nbsp;equal:&nbsp;2<br>Total&nbsp;number&nbsp;of&nbsp;values&nbsp;which&nbsp;compare&nbsp;unequal:&nbsp;1<br><br>Columns&nbsp;with&nbsp;Unequal&nbsp;Values&nbsp;or&nbsp;Types<br>------------------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Column&nbsp;df1&nbsp;dtype&nbsp;df2&nbsp;dtype&nbsp;&nbsp;#&nbsp;Unequal&nbsp;&nbsp;Max&nbsp;Diff&nbsp;&nbsp;#&nbsp;Null&nbsp;Diff<br>0&nbsp;&nbsp;address&nbsp;&nbsp;&nbsp;&nbsp;object&nbsp;&nbsp;&nbsp;&nbsp;object&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br><br>Sample&nbsp;Rows&nbsp;with&nbsp;Unequal&nbsp;Values<br>-------------------------------<br><br>&nbsp;&nbsp;&nbsp;fenergo_id&nbsp;address&nbsp;(df1)&nbsp;address&nbsp;(df2)<br>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1124&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_four&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_five<br><br></pre></p></div></html><script>
+
+    row_items=document.getElementsByName('row-value');
+    for(var i=0;i<row_items.length;i++){
+        if(row_items[i].textContent>0)
+        {
+            row_items[i].style.color='red';
+        }
+
+        else if(row_items[i].textContent>0)
+        {
+            row_items[i].style.color='red';
+        }
+    }
+
+    column_items=document.getElementsByName('col-value');
+    for(var i=0;i<column_items.length;i++){
+
+        if(column_items[i].textContent>0)
+        {
+            column_items[i].style.color='red';
+        }
+
+        else if(column_items[i].textContent>0)
+        {
+            column_items[i].style.color='red';
+        }
+    }
+
+    function display_all(){
+        mismatch_columns=document.getElementById('tab4_1').getElementsByTagName('tr');
+        for (i=1;i<mismatch_columns.length;i++)
+        {
+            mismatch_columns[i].style.display='';
+        }
+    }
+
+function display_only_mismatch(){
+        mismatch_columns=document.getElementById('tab4_1').getElementsByTagName('tr');
+        for (i=1;i<mismatch_columns.length;i++)
+        {
+            if (mismatch_columns[i].style.backgroundColor == 'rgb(255, 0, 0)'){
+                mismatch_columns[i].style.display='';
+            }
+
+            else {
+                mismatch_columns[i].style.display='none';
+            }
+        }
+}
+
+
+function display_only_match(){
+    match_columns=document.getElementById('tab4_1').getElementsByTagName('tr');
+    for (i=1;i<match_columns.length;i++)
+    {
+        if (match_columns[i].style.backgroundColor == 'rgb(0, 255, 0)'){
+            match_columns[i].style.display='';
+        }
+
+        else {
+            match_columns[i].style.display='none';
+        }
+    }
+}
+
+const tabs = document.querySelectorAll('[data-tab-value]')
+const tabInfos = document.querySelectorAll('[data-tab-info]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click',()=>{
+        const target=document.querySelector(tab.dataset.tabValue);
+        tabInfos.forEach(tabInfo => {
+            tabInfo.classList.remove('active');
+        })
+        target.classList.add('active');
+    })
+})
+
+</script>

@@ -1,0 +1,130 @@
+<style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        font: 14px/1.4 Georgia, Serif;
+    }
+
+    table.table1 {
+        border: 1px solid black;
+        box-shadow: 0 0 0 0.1rem black;
+        border-collapse: collapse;
+    }
+
+    table.table2 {
+        text-align: center;
+        border-collapse: collapse;
+        margin-right: auto;
+
+    }
+
+    table.table3 {
+        border:1px solid black;
+        border-collapse: collapse;
+
+    }
+
+    table.table4 {
+        text-align: center;
+        border-collapse: collapse;
+        font: 15px/1.4 Georgia,Serif;
+        text-align: left;
+        box-shadow: 0 0 0 0.1rem black;
+        border-radius: 1px;
+        margin: 0.1rem;
+        padding: 0.1rem;
+        outline-offset: 0.1rem;
+        border: 5px solid black;
+        background: #DBFBF1;
+    }
+
+    th {
+        background: #000000;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    td,th {
+        padding: 6px;
+        border: 1px solid #9B9B9B;
+        text-align: center;
+    }
+
+    .button1 {
+        font-size:  10px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 10px 12px;
+        background-color: black;
+        margin: 0;
+    }
+
+    .sub-table-td{
+        border:none;
+    }
+
+    h2 {
+        color:#EEEEEE;
+        background-color: black;
+        border: medium groove black;
+        text-align: center;
+        box-shadow: 0 0 0 0.5rem black;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        outline-offset: 0.5rem;
+    }
+
+    span{
+        font: 15px/1.4 Georgia, Serif;
+        text-align: left;
+        box-shadow: 0 0 0 0.1rem black;
+        margin: 0.1rem;
+        padding: 0.1rem;
+        outline-offset: 0.1rem;
+    }
+
+    [data-tab-info]{
+        display: none;
+    }
+
+
+    .active[data-tab-info]{
+        display: block;
+    }
+
+    .tab-content {
+        margin-top: 1rem;
+        padding-left: 1rem;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: rgb(0,0,0);
+
+    }
+
+    .tabs {
+        background-color: rgb(0,0,0);
+        font-size: 25px;
+        color: rgb(255,255,255);
+        display: flex;
+    }
+
+    .tabs span {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .tabs span:hover {
+    
+        cursor: pointer;
+        color:  rgb(22, 250, 10);
+    }
+
+    </style>
